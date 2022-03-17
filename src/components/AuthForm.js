@@ -9,7 +9,6 @@ const AuthForm = ({
   header,
 
   buttonTitle,
-  linkContent,
   errorMessage,
   onSubmit,
   navigate,
@@ -49,11 +48,6 @@ const AuthForm = ({
           onPress={() => onSubmit({ email, password })}
         />
       </Spacer>
-      <TouchableOpacity onPress={navigate}>
-        <Spacer>
-          <Text style={styles.link}>{linkContent}</Text>
-        </Spacer>
-      </TouchableOpacity>
     </>
   );
 };
@@ -67,10 +61,6 @@ const styles = StyleSheet.create({
     color: "red",
     fontWeight: "bold",
     marginLeft: 15,
-    fontSize: 16,
-  },
-  link: {
-    color: "blue",
     fontSize: 16,
   },
 });
